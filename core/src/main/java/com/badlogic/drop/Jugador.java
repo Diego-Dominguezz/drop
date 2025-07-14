@@ -44,8 +44,8 @@ public class Jugador {
     }
 
     private void updateHitbox() {
-        hitbox.set(planeSprite.getX(), planeSprite.getY(),
-                planeSprite.getWidth(), planeSprite.getHeight());
+        hitbox.set(planeSprite.getX() - 0.5f, planeSprite.getY() - 0.5f,
+                planeSprite.getWidth() - 0.5f, planeSprite.getHeight() - 0.5f);
     }
 
     public void mover(float deltaX, float deltaY) {
