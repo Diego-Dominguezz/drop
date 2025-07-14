@@ -51,12 +51,12 @@ public class Enemigo {
                 animationTimer = 0f;
             }
             
-            // Mover la bala hacia abajo
-            bulletSprite.translateY(-velocidad * delta);
+            // Mover la bala hacia la izquierda
+            bulletSprite.translateX(-velocidad * delta);
             updateHitbox();
 
-            // Desactivar si sale de la pantalla
-            if (bulletSprite.getY() + bulletSprite.getHeight() < 0) {
+            // Desactivar si sale de la pantalla por la izquierda
+            if (bulletSprite.getX() + bulletSprite.getWidth() < 0) {
                 activo = false;
             }
         }
