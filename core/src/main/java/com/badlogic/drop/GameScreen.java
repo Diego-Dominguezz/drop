@@ -80,7 +80,7 @@ public class GameScreen implements Screen {
         } else if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || Gdx.input.isKeyPressed(Input.Keys.A)) {
             jugador.mover(-speed * delta, 0);
         }
-        
+
         // Movimiento vertical
         if (Gdx.input.isKeyPressed(Input.Keys.UP) || Gdx.input.isKeyPressed(Input.Keys.W)) {
             jugador.mover(0, speed * delta);
@@ -91,7 +91,7 @@ public class GameScreen implements Screen {
         if (Gdx.input.isTouched()) {
             touchPos.set(Gdx.input.getX(), Gdx.input.getY());
             game.viewport.unproject(touchPos);
-            jugador.setPosition(touchPos.x - jugador.getWidth()/2, touchPos.y - jugador.getHeight()/2);
+            jugador.setPosition(touchPos.x - jugador.getWidth() / 2, touchPos.y - jugador.getHeight() / 2);
         }
     }
 
@@ -112,7 +112,7 @@ public class GameScreen implements Screen {
         } else if (jugador.getX() + jugador.getWidth() > worldWidth) {
             jugador.setPosition(worldWidth - jugador.getWidth(), jugador.getY());
         }
-        
+
         if (jugador.getY() < 0) {
             jugador.setPosition(jugador.getX(), 0);
         } else if (jugador.getY() + jugador.getHeight() > worldHeight) {

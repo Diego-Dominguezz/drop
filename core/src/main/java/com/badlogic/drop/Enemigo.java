@@ -50,7 +50,7 @@ public class Enemigo {
                 bulletSprite.setTexture(bulletTextures.get(currentFrame));
                 animationTimer = 0f;
             }
-            
+
             // Mover la bala hacia la izquierda
             bulletSprite.translateX(-velocidad * delta);
             updateHitbox();
